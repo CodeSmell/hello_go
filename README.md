@@ -50,6 +50,17 @@ For example, `foo.go` typically has a matching `foo_test.go` in the same folder.
 
 ### Hello World
 After creating a simple Hello Word 
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, World!")
+}
+```
+
 We can build it...
 
 ```shell
@@ -58,7 +69,8 @@ $ go build
 
 Unlike `mvn` in Java the compiled files are NOT placed in a `target` folder. 
 
-We can run it from the executable file
+We can run it from the executable file (the name is based on the module name in `go.mod`)
+
 ```shell
 $ ./hello
 Hello, World!
