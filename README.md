@@ -1,4 +1,5 @@
 # Go 101
+![go](gogopher.png)
 
 Go is a general purpose programming language that was created by Google in 2007 and open sourced in 2009. Version 1.0 was released in 2012. The last two major Go releases are supported. 
 
