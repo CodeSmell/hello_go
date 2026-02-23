@@ -1,0 +1,29 @@
+# generated 
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Temp/log
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Go build/test
+/bin/
+/dist/
+/out/
+/build/
+*.exe
+*.test
+*.prof
+
