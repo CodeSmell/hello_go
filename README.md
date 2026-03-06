@@ -7,6 +7,7 @@ Go 1 is the stable platform. Major releases are identified by the second major n
 
 **Good Resources**
 - [Go.dev](https://go.dev/)
+- [How to Write Go Code](https://go.dev/doc/code)
 - [Effective Go](https://go.dev/doc/effective_go)
 - [The Go Blog](https://go.dev/blog/)
 
@@ -49,6 +50,15 @@ hello_go/
 
 For example, `foo.go` typically has a matching `foo_test.go` in the same folder.
 
+```
+hello_go/
+  ├── go.mod
+  ├── main.go
+  ├── internal/ (optional)
+  ├── foo.go
+  └── foo_test.go
+```
+
 ### Hello World
 After creating a simple Hello Word 
 
@@ -82,4 +92,17 @@ Or we can combine the build and the run commands
 ```shell
 $ go run .
 Hello, World!
+```
+
+When using external modules they can be added as dependencies using this command.
+This will update the `go.mod` file
+
+```shell
+go mod tidy
+```
+
+Once we add tests we can run them using this command
+
+```shell
+go test ./...
 ```
