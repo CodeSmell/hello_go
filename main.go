@@ -6,7 +6,10 @@ package main
 // in Go it is typical to make the module path match the URL for the repository.
 // but the module path can be whatever you want (and is found in the go.mod file)
 import (
+	// local package imports
+	"example/hello/distance"
 	"example/hello/morestrings"
+	speakers "example/hello/speakers"
 
 	// standard library imports
 	"fmt"
@@ -25,7 +28,9 @@ func swap(x string, y string) (string, string) {
 	return y, x
 }
 
-func main() {
+// initial playground code to
+// work with Go syntax
+func hello_sandbox() {
 	// declare variable
 	// assign value to variable on separate line
 	var a string
@@ -56,4 +61,39 @@ func main() {
 	if err != nil {
 		log.Fatal(err.Error())
 	}
+}
+
+func distance_sandbox() {
+	dist1 := distance.Kilometers(100.0)
+	dist2 := dist1.ToMiles()
+
+	fmt.Println(dist1, "in kilometers is", dist2, "in miles")
+	// compiler error due to mismatched types
+	//result := dist1 + dist2
+	//fmt.Println(result)
+}
+
+// a function that takes anything that can speak
+func talk_to_me(speaker speakers.Speaker) {
+	fmt.Println(speaker.Speak())
+}
+
+// a function that takes anything that can move
+func walk_this_way(walker speakers.Walker) {
+	fmt.Println(walker.Walk())
+}
+
+func main() {
+	fido := speakers.NewDog("Fido", "Labrador")
+	talk_to_me(fido)
+	walk_this_way(fido)
+
+	garfield := speakers.NewCat("Garfield")
+	talk_to_me(garfield)
+	walk_this_way(garfield)
+
+	echo := speakers.NewEcho("Hellooo...")
+	talk_to_me(echo)
+	// echo does not walk
+	// walk_this_way(echo)
 }
