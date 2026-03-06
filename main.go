@@ -10,6 +10,7 @@ import (
 
 	// standard library imports
 	"fmt"
+	"log"
 	"math/rand"
 
 	// third party imports
@@ -50,4 +51,9 @@ func main() {
 
 	// demonstrate the use of the cmp package
 	fmt.Println(cmp.Diff("Hello World", "Hello Go"))
+
+	_, err := morestrings.ReverseRunesWithErr("")
+	if err != nil {
+		log.Fatal(err.Error())
+	}
 }

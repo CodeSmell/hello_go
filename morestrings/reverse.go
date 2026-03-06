@@ -1,6 +1,8 @@
 // Package with additional functions to manipulate strings
 package morestrings
 
+import "errors"
+
 // ReverseRunes returns its argument string reversed rune-wise left to right.
 // from the How to Write Go Code post
 // the capital letter means this function is exported
@@ -11,4 +13,12 @@ func ReverseRunes(s string) string {
 		r[i], r[j] = r[j], r[i]
 	}
 	return string(r)
+}
+
+func ReverseRunesWithErr(s string) (string, error) {
+	if s == "" {
+		return "", errors.New("input string is empty")
+	}
+	rev := ReverseRunes(s)
+	return rev, nil
 }

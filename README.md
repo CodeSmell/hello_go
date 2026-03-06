@@ -8,8 +8,11 @@ Go 1 is the stable platform. Major releases are identified by the second major n
 **Good Resources**
 - [Go.dev](https://go.dev/)
 - [How to Write Go Code](https://go.dev/doc/code)
+- [A Tour of Go](https://go.dev/tour/)
+- [Go Tutorial](https://go.dev/doc/tutorial/getting-started)
 - [Effective Go](https://go.dev/doc/effective_go)
 - [The Go Blog](https://go.dev/blog/)
+- [Standard Library](https://pkg.go.dev/std)
 
 ## Seven Languages in Seven Weeks style
 In the style of *Seven Languages in Seven Weeks*, let's breakdown some aspects of Go (as I try to teach myself the language)
